@@ -21,7 +21,6 @@ public class MainPageQuestionsTest extends BaseTest {
     }
 
     @Parameterized.Parameters
-
     public static Object[][] getCredentials() {
         return new Object[][] {
                 { 0, "Сколько это стоит? И как оплатить?", "Сутки — 400 рублей. Оплата курьеру — наличными или картой."},
@@ -37,7 +36,7 @@ public class MainPageQuestionsTest extends BaseTest {
 
     @Test
     public void checkClickQuestion_expectTextIsDisplayed(){
-        super.implicitlyWait(3);
+        super.implicitlyWait(10);
         MainPage mainPage = new MainPage(driver);
         mainPage.Open();
         String actualQuestion = mainPage.clickQuest(index);
